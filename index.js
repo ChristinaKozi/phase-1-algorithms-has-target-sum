@@ -1,6 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const numbers = new Set();
+  for (let i = 0; i < array.length; i++){
+    if (numbers.has(target - array[i])) {
+      return true
+    }
+    numbers.add(array[i])
+  }
+  return false
 }
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +17,12 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Write a function that takes in an array of numbers and a target integer.
+  If the sum of any two numbers in the array equals the target integer, return true.
+
+  function hasTargetSum(array, target)
+    if sum of two numbers in array equals target
+      return true
 */
 
 /*
