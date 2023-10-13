@@ -13,6 +13,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Write the Big O time complexity of your function here
+  Since the functions contains one array iteration and the "has" and "add" methods are constants,
+  the Big O time complexity is linear, O(n).
 */
 
 /* 
@@ -26,7 +28,12 @@ function hasTargetSum(array, target) {
 */
 
 /*
-  Add written explanation of your solution here
+-Create a new set to store checked numbers
+-iterate through array numbers
+-If the set has the number that represents the difference between target and the 
+current element, return true.
+-Add checked element to the new set
+-Return false if there is no matching pair
 */
 
 // You can run `node index.js` to view these console logs
